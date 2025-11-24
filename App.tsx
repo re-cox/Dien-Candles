@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -6,12 +7,12 @@ import Shop from './pages/Shop';
 import AboutPage from './pages/AboutPage';
 
 const App: React.FC = () => {
-  const path = window.location.pathname;
+  const { pathname, hash } = useLocation();
 
+  // Scroll to top on route change, or scroll to hash element
   useEffect(() => {
-    // Handle hash scrolling on load
-    if (window.location.hash) {
-      const element = document.getElementById(window.location.hash.substring(1));
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
       if (element) {
         setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth' });
@@ -20,22 +21,17 @@ const App: React.FC = () => {
     } else {
       window.scrollTo(0, 0);
     }
-  }, [path]);
-
-  let pageContent;
-  if (path === '/shop') {
-    pageContent = <Shop />;
-  } else if (path === '/about') {
-    pageContent = <AboutPage />;
-  } else {
-    pageContent = <Home />;
-  }
+  }, [pathname, hash]);
 
   return (
     <div className="min-h-screen flex flex-col font-sans text-stone-800 selection:bg-stone-200">
       <Header />
       <main className="flex-grow">
-        {pageContent}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
       </main>
       <Footer />
     </div>

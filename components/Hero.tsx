@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Instagram } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -27,14 +28,14 @@ const Hero: React.FC = () => {
         </p>
         
         <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6 animate-fade-in-up delay-300">
-          <a 
-            href="/shop"
+          <Link 
+            to="/shop"
             className="group relative px-8 py-3 bg-stone-100 text-stone-900 text-sm font-medium tracking-wider overflow-hidden rounded-sm transition-all hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105"
           >
             <span className="relative z-10 flex items-center">
               ALIŞVERİŞE BAŞLA <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </span>
-          </a>
+          </Link>
           
           <a 
             href="https://instagram.com/diencandles" 

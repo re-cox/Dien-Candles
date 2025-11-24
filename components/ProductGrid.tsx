@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { PRODUCTS } from '../constants';
 import { ShieldCheck } from 'lucide-react';
 import ProductCard from './ProductCard';
@@ -15,9 +16,9 @@ const ProductGrid: React.FC = () => {
             </p>
           </div>
           <div className="hidden md:block">
-            <a href="/shop" className="text-stone-800 border-b border-stone-300 pb-1 hover:border-stone-800 transition-colors text-sm">
+            <Link to="/shop" className="text-stone-800 border-b border-stone-300 pb-1 hover:border-stone-800 transition-colors text-sm">
               Tüm Ürünleri Gör
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -28,9 +29,9 @@ const ProductGrid: React.FC = () => {
         </div>
 
         <div className="mt-8 md:hidden text-center">
-          <a href="/shop" className="inline-block px-6 py-3 border border-stone-300 text-stone-800 text-sm font-medium">
+          <Link to="/shop" className="inline-block px-6 py-3 border border-stone-300 text-stone-800 text-sm font-medium">
             Tüm Ürünleri Gör
-          </a>
+          </Link>
         </div>
 
         <div className="mt-16 text-center">

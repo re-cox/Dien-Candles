@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Leaf, Heart, Recycle, Sparkles } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
@@ -114,9 +115,9 @@ const AboutPage: React.FC = () => {
             <p className="text-stone-600 font-light leading-relaxed">
               Size ulaşan her kutunun içinde sadece bir ürün değil, saatlerce süren bir emek ve detaylara gösterilen özen var.
             </p>
-            <a href="/shop" className="inline-block mt-4 text-stone-800 border-b border-stone-800 pb-1 text-sm font-medium hover:text-stone-500 hover:border-stone-500 transition-colors">
+            <Link to="/shop" className="inline-block mt-4 text-stone-800 border-b border-stone-800 pb-1 text-sm font-medium hover:text-stone-500 hover:border-stone-500 transition-colors">
               Koleksiyonu İncele
-            </a>
+            </Link>
           </div>
 
           <div className="w-full md:w-1/2">

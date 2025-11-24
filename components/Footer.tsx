@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Instagram, Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -18,9 +19,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-medium mb-4">Mağaza</h4>
             <ul className="space-y-2">
-              <li><a href="/shop" className="hover:text-white transition-colors">Tüm Ürünler</a></li>
-              <li><a href="/shop" className="hover:text-white transition-colors">Konsept Mumlar</a></li>
-              <li><a href="/shop" className="hover:text-white transition-colors">Hediye Setleri</a></li>
+              <li><Link to="/shop" className="hover:text-white transition-colors">Tüm Ürünler</Link></li>
+              <li><Link to="/shop" className="hover:text-white transition-colors">Konsept Mumlar</Link></li>
+              <li><Link to="/shop" className="hover:text-white transition-colors">Hediye Setleri</Link></li>
             </ul>
           </div>
 
@@ -31,7 +32,7 @@ const Footer: React.FC = () => {
               <li><a href="#" className="hover:text-white transition-colors">Kargo & Teslimat</a></li>
               <li><a href="#" className="hover:text-white transition-colors">İade Koşulları</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Sıkça Sorulan Sorular</a></li>
-              <li><a href="/about" className="hover:text-white transition-colors">Hakkımızda</a></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">Hakkımızda</Link></li>
             </ul>
           </div>
 
@@ -39,7 +40,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-medium mb-4">Takipte Kalın</h4>
             <div className="flex space-x-4 mb-6">
-              <a href="#" className="w-10 h-10 border border-stone-700 rounded-full flex items-center justify-center hover:bg-white hover:text-stone-900 transition-all">
+              <a href="https://instagram.com/diencandles" target="_blank" rel="noreferrer" className="w-10 h-10 border border-stone-700 rounded-full flex items-center justify-center hover:bg-white hover:text-stone-900 transition-all">
                 <Instagram className="w-4 h-4" />
               </a>
               <a href="#" className="w-10 h-10 border border-stone-700 rounded-full flex items-center justify-center hover:bg-white hover:text-stone-900 transition-all">
